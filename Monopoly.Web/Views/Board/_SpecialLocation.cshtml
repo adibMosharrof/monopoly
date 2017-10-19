@@ -1,0 +1,32 @@
+﻿@model Monopoly.Location
+@{
+    var imageName = "";
+
+    switch (Model.Id)
+    {
+        case 1:
+            imageName = "go";
+            break;
+        case 11:
+            imageName = "visitingjail";
+            break;
+        case 21:
+            imageName = "freeparking";
+            break;
+        case 31:
+            imageName = "gotojail";
+            break;
+    }
+    var imagePath = "~/Content/image/" + imageName + ".png";
+}
+
+
+@*@Html.Partial("_"+viewName, @Model, new ViewDataDictionary() { { "Name", "" } })*@
+
+
+<div class="location special-location no-padding ">
+    <img class="special-location-image" src="@Url.Content(imagePath)" alt="Alternate Text" />
+    
+        @Html.Partial("_Players")
+    
+</div>

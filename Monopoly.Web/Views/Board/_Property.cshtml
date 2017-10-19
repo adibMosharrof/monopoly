@@ -1,0 +1,14 @@
+﻿@model Monopoly.Property
+<div class="location" >
+    <div class="property-header @Model.Color.ToLower()">
+    </div>
+    <div class="property-name">
+        @Model.Name
+    </div>
+    <div class="property-emptybody">
+               @Html.Partial("_Players")
+    </div>
+    <div class="property-cost">
+        $@Model.Cost
+    </div>
+</div>

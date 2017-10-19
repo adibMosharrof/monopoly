@@ -1,0 +1,19 @@
+﻿@model Monopoly.RealEstate
+@{
+    var imagePath = "~/Content/image/" + ViewData["Name"] + ".png";
+}
+<div class="location ">
+    <div class="property-header">
+        @Model.Name
+    </div>
+    <div class="property-name">
+        
+    </div>
+    <div class="property-emptybody">
+        @Html.Partial("_Players")
+        <img class="railway-image" src="@Url.Content(imagePath)" alt="Alternate Text" />
+    </div>
+    <div class="property-cost">
+        $@Model.Cost
+    </div>
+</div>

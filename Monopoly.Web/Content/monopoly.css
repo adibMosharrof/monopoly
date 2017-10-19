@@ -1,0 +1,168 @@
+﻿.location {
+    border: 1px solid black;
+    height: 120px;
+    background-color: #CCE3C7;
+    /*transform: rotate(90deg);*/
+}
+
+.special-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-locations {
+    transform: rotate(90deg);
+}
+
+.right-locations {
+    transform: rotate(270deg);
+}
+
+.left-locations .location {
+    height: 94px;
+}
+
+.right-locations .location {
+    height: 94px;
+}
+
+
+.no-padding {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.property-header {
+    height: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.property-name {
+    text-align: center;
+    font-size: 14px;
+}
+
+.property-emptybody {
+    /*height: 21px;*/
+    padding-left: 4px;
+    padding-top: 8px;
+    /*position: absolute;*/
+}
+
+.property-cost {
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    padding: 0;
+    left: 40%;
+}
+
+.railway-image {
+    max-height: 100%;
+    max-width: 50%;
+    object-fit: cover;
+    margin-left: 19px;
+    margin-top: 10px;
+}
+
+.special-location-image {
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+    /*flex-shrink: 0;*/
+    /*max-width: 100%;
+    max-height: 100%;*/
+}
+
+.player-container {
+    z-index: 5;
+    position: absolute;
+}
+
+.player {
+    width: 25px;
+    height: 16px;
+    padding: 0px;
+    margin-bottom: 4px;
+}
+
+.player-overview {
+    padding: 4px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #b3e5fc;
+}
+
+.player-overview-container {
+    margin-top: 103px;
+}
+
+.player-name {
+    padding: 2px 5px;
+    background: darkolivegreen;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.darkblue {
+    background-color: darkblue;
+}
+
+.dice {
+    padding: 25px;
+    background-color: #dcedc8;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.player-status {
+    padding-bottom: 20px;
+    height: 80px;
+}
+
+.ThrowDice {
+    padding: 12px;
+    background-color: #008080;
+    color: #fff;
+    border-radius: 4px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}

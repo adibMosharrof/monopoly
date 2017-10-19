@@ -1,0 +1,17 @@
+﻿@model Monopoly.Player
+@{
+    var maxNumOfPlayers = 8;
+}
+@using (Html.BeginForm(""))
+{
+    for (var i = 0; i < maxNumOfPlayers; i++)
+    {
+        <div>
+            @Html.LabelFor(m => m.Name)    
+        </div>
+        
+    //Html.LabelFor()
+    }
+}
+
+

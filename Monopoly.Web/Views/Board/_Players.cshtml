@@ -1,0 +1,15 @@
+﻿@model Monopoly.Location
+@{
+    var imageBasePath = "~/Content/image/Players/";
+}
+<div class="player-container">
+    @foreach (var player in Model.Players.Values)
+    {
+        var imagePath = imageBasePath + player.PieceName + ".png";
+        <div class="pull-left">
+            
+            @*<img class="player" src="@Url.Content(imagePath)" alt="@player.Name" />*@
+            <span class="player-name">@player.Name</span>
+        </div>
+    }
+</div>

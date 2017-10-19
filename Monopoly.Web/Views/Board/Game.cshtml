@@ -1,0 +1,86 @@
+﻿@model Monopoly.Web.Models.GameViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-1 no-padding">
+            @Html.Partial("_" + Model.Locations[20].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[20])
+        </div>
+        @for (var i = 21; i < 30; i++)
+        {
+            <div class="col-md-1 no-padding">
+                @Html.Partial("_" + Model.Locations[i].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[i])
+            </div>
+        }
+        <div class="col-md-1 no-padding">
+            @Html.Partial("_" + Model.Locations[30].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[30])
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            @for (var i = 19; i > 10; i--)
+            {
+                <div class="row">
+                    <div class="col-md-6 no-padding left-locations">
+                        @Html.Partial("_" + Model.Locations[i].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[i])
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-9 dice">
+                    <div class="player-status">
+                        @if (!Model.IsThrowDie)
+                        {
+                            <div><b>@Model.CurrentPlayer.Name</b> rolled @Model.DieValue</div>
+                            <div><b>@Model.CurrentPlayer.Name</b> landed on <u>@Model.Locations[Model.CurrentPlayer.BoardPosition - 1].Name</u></div>
+                        }
+                        <div >@Model.ActionMessage</div>
+                    </div>
+                    @(Model.IsThrowDie
+                    ? Html.ActionLink("Throw Die", "ThrowDie", null, new { @class = "ThrowDice" })
+                    : Html.ActionLink("End Turn", "EndTurn", null, new { @class = "ThrowDice" }))
+                </div>
+                <div class="col-md-3">
+                    @Html.Partial("_PlayersOverview", Model.Players)
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2">
+            @for (var i = 31; i < 40; i++)
+            {
+                <div class="row">
+                    <div class="col-md-6 no-padding right-locations">
+                        @Html.Partial("_" + Model.Locations[i].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[i])
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-1 no-padding">
+            @Html.Partial("_" + Model.Locations[10].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[10])
+        </div>
+        @for (var i = 9; i > 0; i--)
+        {
+            <div class="col-md-1 no-padding">
+                @Html.Partial("_" + Model.Locations[i].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[i])
+            </div>
+        }
+        <div class="col-md-1 no-padding">
+            @Html.Partial("_" + Model.Locations[0].GetType().ToString().Replace("Monopoly.", ""), Model.Locations[0])
+        </div>
+    </div>
+
+</div>
+<div>
+    lorem ipsum
+</div>
+

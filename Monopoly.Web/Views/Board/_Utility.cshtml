@@ -1,0 +1,15 @@
+﻿@model Monopoly.RealEstate
+@{
+    var utilityName = "";
+    if (Model.Id == 13)
+    {
+        utilityName = "electriccompany";
+    }
+    else if (Model.Id == 29)
+    {
+        utilityName = "waterworks";
+    }
+}
+
+
+@Html.Partial("_RailwayOrUtility",@Model, new ViewDataDictionary() { { "Name", utilityName } })

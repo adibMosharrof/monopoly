@@ -1,0 +1,15 @@
+﻿@model List<Monopoly.Player>
+
+<div class="player-overview-container">
+    @foreach (var player in Model)
+    {
+        <div class="row text-center player-overview">
+            <div>
+                <b>@player.Name</b>
+            </div>
+            <div>
+                $@player.Balance
+            </div>
+        </div>
+    }
+</div>

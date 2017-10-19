@@ -1,0 +1,8 @@
+﻿
+@model Monopoly.Location
+@{
+    var imagePath = "~/Content/image/" + Model.Name + ".png";
+}
+<div class="location special-location no-padding  ">
+    <img class="special-location-image" src="@Url.Content(imagePath)" alt="Alternate Text" />
+</div>
